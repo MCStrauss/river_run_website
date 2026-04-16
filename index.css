@@ -1,0 +1,115 @@
+:root {
+    /* Color theme pulled from your thumbnail screenshot */
+    --page-bg: #f9f9f9;          /* The clean, off-white background */
+    --text-primary: #333333;     /* Muted black for readable text */
+    --text-bold: #111111;        /* Darker, bold black for headings and logo */
+    --thumbnail-water: #7d8ea0;  /* Muted, cool blue accent pulled from the water */
+    --nav-gap: 30px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--page-bg);
+    color: var(--text-primary);
+    line-height: 1.8; /* Increased line-height for that clean space */
+}
+
+/* TYPOGRAPHY */
+h1, h2, .logo {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600; /* Medium-bold feel */
+    color: var(--text-bold);
+    letter-spacing: -0.5px; /* Tightens the bold text slightly */
+}
+
+/* HEADER & NAVIGATION */
+header {
+    padding: 2.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0,0,0,0.05); /* Very subtle separator */
+}
+
+.logo {
+    font-size: 1.6rem;
+}
+
+.run {
+    font-weight: 300; /* Contrasting 'run' to match the bold/light look */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: var(--nav-gap);
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 300;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--thumbnail-water); /* Accent blue on hover */
+}
+
+/* MAIN CONTENT */
+main {
+    max-width: 900px; /* Constraints the text for readability */
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+#hero {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Aligned left, matching the layout of image 4 */
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    color: var(--text-bold);
+}
+
+.content-section {
+    margin-bottom: 6rem;
+}
+
+.about-text p {
+    font-weight: 300;
+}
+
+/* PLACEHOLDERS */
+.player-placeholder {
+    width: 100%;
+    height: 150px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--thumbnail-water); /* Subtle accent for placeholders */
+}
+
+/* FOOTER */
+footer {
+    padding: 3rem;
+    text-align: center;
+    font-weight: 300;
+    color: var(--thumbnail-water); /* Pulling the accent to the bottom */
+}
