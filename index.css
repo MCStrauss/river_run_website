@@ -23,21 +23,26 @@ h1, h2, .logo {
     letter-spacing: -0.5px; /* Tightens the bold text slightly */
 }
 
+
+
 /* HEADER & NAVIGATION */
+
 header {
-    padding: 2.5rem 2rem;
+    padding: 2.5rem 4rem;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid rgba(0,0,0,0.05); /* Very subtle separator */
+    width: 100%;
 }
 
 .logo {
-    font-size: 1.6rem;
-}
-
-.run {
-    font-weight: 300; /* Contrasting 'run' to match the bold/light look */
+    font-size: 2.2rem;        /* bigger */
+    text-align: center;
+    flex: 1;                  /* takes up space so it centers naturally */
 }
 
 nav ul {
@@ -47,6 +52,7 @@ nav ul {
     margin: 0;
     padding: 0;
 }
+
 
 nav a {
     color: var(--text-primary);
