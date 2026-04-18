@@ -57,28 +57,35 @@ nav a {
 
 .giant-text {
     font-family: 'Syne', sans-serif;
-    /* OLD: font-size: 15vw; */
-    /* NEW: Fluid font that is at least 3rem, ideally 12vw, but capped at 10rem */
-    font-size: clamp(3rem, 12vw, 10rem); 
-    line-height: 0.85; /* Slightly relaxed line-height */
+    /* 🟢 REFINED CLAMP 🟢 
+       Lowered middle value to 9vw and capped the max at 8.5rem 
+       This ensures 'RECORDINGS' stays on one line on most laptops. */
+    font-size: clamp(3rem, 9vw, 8.5rem); 
+    
+    line-height: 0.8;
     margin: 0;
     z-index: 2;
     text-align: center;
-    position: relative; /* Acts as anchor for the bubble */
+    position: relative;
+    
+    /* 🟢 TIGHTER SPACING 🟢
+       Negative letter spacing is a hallmark of this high-fashion style.
+       It makes the words feel like a single solid block. */
+    letter-spacing: -0.04em; 
+    word-spacing: -0.1em;
 }
 
 .hero-image-container {
-    /* Anchoring relative to the *viewport*, but with refined alignment */
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 1; /* Sits *behind* the text for that layered 'editorial' look */
+    z-index: 1;
     
-    /* OLD: Fixed dimensions like 400px will break on small/large screens */
-    /* NEW: Scale the bubble container with the viewport, with a ceiling */
-    width: clamp(250px, 40vw, 500px);
-    height: clamp(250px, 40vw, 500px);
+    /* Scaling the bubble to be slightly smaller so it doesn't 
+       compete with the text as much */
+    width: clamp(200px, 35vw, 420px);
+    height: clamp(200px, 35vw, 420px);
 }
 
 .circle-mask {
